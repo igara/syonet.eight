@@ -1,0 +1,51 @@
+{
+  "name": "syonet_eight",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "dev:www": "cd projects/www && next dev",
+    "build:www": "cd projects/www && next build",
+    "start:www": "cd projects/www && next start",
+    "lint:www": "cd projects/www && next lint",
+    "test:www": "cd projects/www && cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "dev": "npm-run-all --parallel dev:www",
+    "build": "npm-run-all --parallel build:www",
+    "lint": "npm-run-all --parallel lint:www",
+    "test": "npm-run-all --parallel test:www",
+    "rm": "rimraf",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "next": "12.0.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.16.0",
+    "@storybook/addon-actions": "6.3.12",
+    "@storybook/addon-essentials": "6.3.12",
+    "@storybook/addon-links": "6.3.12",
+    "@storybook/react": "6.3.12",
+    "@testing-library/react": "12.1.2",
+    "@testing-library/react-hooks": "7.0.2",
+    "@types/jest": "27.0.3",
+    "@types/node": "16.11.9",
+    "@types/react": "17.0.35",
+    "@types/react-dom": "17.0.11",
+    "@types/react-test-renderer": "17.0.1",
+    "babel-loader": "^8.2.3",
+    "esbuild-jest": "0.5.0",
+    "eslint": "7.23.0",
+    "eslint-config-next": "12.0.4",
+    "jest": "27.3.1",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.4.1",
+    "rimraf": "3.0.2",
+    "typescript": "4.5.2"
+  },
+  "workspaces": [
+    "projects/www"
+  ]
+}
