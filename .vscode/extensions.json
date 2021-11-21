@@ -3,6 +3,7 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "cpylua.language-postcss",
-    "stylelint.vscode-stylelint"
+    "stylelint.vscode-stylelint",
+    "silvenon.mdx"
   ]
 }

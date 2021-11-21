@@ -4,13 +4,15 @@
   "description": "",
   "private": true,
   "scripts": {
-    "dev:www": "cd projects/www && next dev",
-    "build:www": "cd projects/www && next build",
-    "start:www": "cd projects/www && next start",
-    "lint:www": "cd projects/www && next lint",
-    "test:www": "cd projects/www && cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "dev:www": "cd projects/syonet_eight_www && next dev",
+    "build:www": "cd projects/syonet_eight_www && next build",
+    "start:www": "cd projects/syonet_eight_www && next start",
+    "lint:www": "cd projects/syonet_eight_www && next lint",
+    "test:www": "cd projects/syonet_eight_www && cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "deploy:www": "cd projects/syonet_eight_www && cross-env NODE_ENV=production serverless",
     "dev": "npm-run-all --parallel dev:www",
     "build": "npm-run-all --parallel build:www",
+    "start": "npm-run-all --parallel start:www",
     "lint": "npm-run-all --parallel lint:www",
     "test": "npm-run-all --parallel test:www",
     "rm": "rimraf",
@@ -36,6 +38,8 @@
     "@types/react-dom": "17.0.11",
     "@types/react-test-renderer": "17.0.1",
     "babel-loader": "^8.2.3",
+    "cross-env": "7.0.3",
+    "esbuild": "0.13.15",
     "esbuild-jest": "0.5.0",
     "eslint": "7.23.0",
     "eslint-config-next": "12.0.4",
@@ -43,9 +47,11 @@
     "npm-run-all": "4.1.5",
     "prettier": "2.4.1",
     "rimraf": "3.0.2",
+    "serverless": "2.66.2",
+    "storybook-css-modules-preset": "1.1.1",
     "typescript": "4.5.2"
   },
   "workspaces": [
-    "projects/www"
+    "projects/syonet_eight_www"
   ]
 }
