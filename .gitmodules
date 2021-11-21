@@ -1,0 +1,3 @@
+[submodule "projects/syonet_eight_www"]
+	path = projects/syonet_eight_www
+	url = https://github.com/igara/syonet_eight_www.git
