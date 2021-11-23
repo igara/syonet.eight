@@ -1,4 +1,4 @@
-[submodule "projects/syonet_eight_www"]
-	path = projects/syonet_eight_www
-	url = https://github.com/igara/syonet_eight_www.git
+[submodule "projects/syonet_eight_design_system"]
+	path = projects/syonet_eight_design_system
+	url = https://github.com/igara/syonet_eight_design_system.git
 	ignore = dirty
