@@ -49,7 +49,7 @@ yarn destroy:www
 already settings provider aws in [Serverless Dashboard](https://app.serverless.com/) and create cloudformation stack.
 
 ```
-yarn build-storybook
+yarn build:storybook
 yarn deploy:storybook
 ```
 

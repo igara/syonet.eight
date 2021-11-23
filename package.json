@@ -18,9 +18,11 @@
     "test": "npm-run-all --parallel test:www",
     "rm": "rimraf",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build:storybook": "build-storybook",
     "deploy:storybook": "cd projects/syonet_eight_storybook && cross-env SLS_DEBUG=* serverless deploy",
-    "destroy:storybook": "cd projects/syonet_eight_storybook && serverless remove --force"
+    "destroy:storybook": "cd projects/syonet_eight_storybook && serverless remove --force",
+    "storycap": "storycap --serverCmd \"npx http-server storybook-static -p 9001\" http://localhost:9001",
+    "vrt": "reg-suit run"
   },
   "dependencies": {
     "next": "12.0.4",
@@ -49,9 +51,15 @@
     "jest": "27.3.1",
     "npm-run-all": "4.1.5",
     "prettier": "2.4.1",
+    "puppeteer": "11.0.0",
+    "reg-keygen-git-hash-plugin": "0.11.1",
+    "reg-notify-github-plugin": "0.11.1",
+    "reg-publish-s3-plugin": "0.11.0",
+    "reg-suit": "0.11.1",
     "rimraf": "3.0.2",
     "serverless": "2.66.2",
     "storybook-css-modules-preset": "1.1.1",
+    "storycap": "3.1.0",
     "typescript": "4.5.2"
   },
   "workspaces": [

@@ -6,6 +6,8 @@ node_modules
 .pnp
 .pnp.js
 storybook-static
+__screenshots__
+.reg
 
 # testing
 coverage
@@ -37,3 +39,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
