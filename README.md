@@ -30,8 +30,29 @@ yarn test
 yarn storybook
 ```
 
-## deploy
+## deploy & destroy
+
+### https://syonet.work
+
+already setting aws config.
 
 ```
 yarn deploy:www
+```
+
+```
+yarn destroy:www
+```
+
+### https://storybook.syonet.work
+
+already settings provider aws in [Serverless Dashboard](https://app.serverless.com/) and create cloudformation stack.
+
+```
+yarn build-storybook
+yarn deploy:storybook
+```
+
+```
+yarn destroy:storybook
 ```

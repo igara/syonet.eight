@@ -1,0 +1,11 @@
+app: syonet-eight-storybook
+name: syonet-eight-storybook
+component: website
+
+inputs:
+  src: ../../storybook-static
+  domain: storybook.syonet.work
+  region: us-east-1
+  bucketName: syonet-eight-storybook
+  indexDocument: index.html
+  errorDocument: index.html

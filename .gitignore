@@ -5,6 +5,7 @@ node_modules
 .serverless
 .pnp
 .pnp.js
+storybook-static
 
 # testing
 coverage
