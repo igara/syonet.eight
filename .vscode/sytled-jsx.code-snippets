@@ -1,0 +1,17 @@
+{
+  "@www:import": {
+    "prefix": "@www:import",
+    "body": "import {} from '@www/';",
+    "description": "@wwwによるimport文追加"
+  },
+  "@style:variables": {
+    "prefix": "@style:variables",
+    "body": "import { StyleVariables } from '@www/components/styles';",
+    "description": "style共通の変数を追加"
+  },
+  "@media:query": {
+    "prefix": "@media:query",
+    "body": "@media screen and (max-width: ${StyleVariables.breakpoints.small}) {\n}",
+    "description": "media query追加"
+  }
+}

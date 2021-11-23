@@ -3,7 +3,7 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "cpylua.language-postcss",
-    "stylelint.vscode-stylelint",
-    "silvenon.mdx"
+    "silvenon.mdx",
+    "Divlo.vscode-styled-jsx-languageserver"
   ]
 }
