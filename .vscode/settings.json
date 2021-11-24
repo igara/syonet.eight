@@ -11,5 +11,6 @@
   },
   "files.insertFinalNewline": true,
   "files.eol": "\n",
-  "files.exclude": {}
+  "files.exclude": {},
+  "eslint.workingDirectories": [{ "mode": "auto" }]
 }

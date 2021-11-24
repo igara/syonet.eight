@@ -11,12 +11,18 @@
     "test:www": "cd projects/syonet_eight_www && cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "deploy:www": "cd projects/syonet_eight_www && cross-env NODE_ENV=production SLS_DEBUG=* serverless",
     "destroy:www": "cd projects/syonet_eight_www && cross-env NODE_ENV=production serverless remove --force",
-    "dev": "npm-run-all --parallel dev:www",
-    "build": "npm-run-all --parallel build:www",
+    "dev:design_system": "cd projects/syonet_eight_design_system && tsc -w",
+    "build:design_system": "cd projects/syonet_eight_design_system && tsc",
+    "lint:design_system": "cd projects/syonet_eight_design_system && next lint",
+    "test:design_system": "cd projects/syonet_eight_design_system &&  cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "dev": "npm-run-all --parallel dev:www dev:design_system",
+    "build": "npm-run-all --parallel build:www build:design_system",
     "start": "npm-run-all --parallel start:www",
-    "lint": "npm-run-all --parallel lint:www",
-    "test": "npm-run-all --parallel test:www",
+    "lint": "npm-run-all --parallel lint:www lint:design_system",
+    "test": "npm-run-all --parallel test:www test:design_system",
     "rm": "rimraf",
+    "rm:all": "rimraf projects/syonet_eight_design_system/dist projects/syonet_eight_www/.next node_modules",
+    "yarn:clean": "yarn cache clean design_system",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "deploy:storybook": "cd projects/syonet_eight_storybook && cross-env SLS_DEBUG=* serverless deploy",
@@ -27,7 +33,8 @@
   "dependencies": {
     "next": "12.0.4",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "design_system": "file:./projects/syonet_eight_design_system"
   },
   "devDependencies": {
     "@babel/core": "7.16.0",
@@ -62,7 +69,11 @@
     "storycap": "3.1.0",
     "typescript": "4.5.2"
   },
+  "resolutions": {
+    "@types/react": "17.0.35"
+  },
   "workspaces": [
-    "projects/syonet_eight_www"
+    "projects/syonet_eight_www",
+    "projects/syonet_eight_design_system"
   ]
 }

@@ -4,10 +4,10 @@
     "body": "import {} from '@www/';",
     "description": "@wwwによるimport文追加"
   },
-  "@style:variables": {
-    "prefix": "@style:variables",
-    "body": "import { StyleVariables } from '@www/components/styles';",
-    "description": "style共通の変数を追加"
+  "@design_system:import": {
+    "prefix": "@design_system:import",
+    "body": "import {} from '@design_system/';",
+    "description": "@design_systemによるimport文追加"
   },
   "@media:query": {
     "prefix": "@media:query",
