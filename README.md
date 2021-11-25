@@ -17,6 +17,14 @@ yarn
 yarn dev
 ```
 
+## design_system
+
+### build
+
+```
+yarn build:design_system
+```
+
 ## test & lint
 
 ```

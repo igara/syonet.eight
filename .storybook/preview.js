@@ -1,4 +1,13 @@
 import * as nextImage from "next/image";
+import { StyleRegistry } from "styled-jsx";
+
+export const decorators = [
+  (Story) => (
+    <StyleRegistry>
+      <Story />
+    </StyleRegistry>
+  ),
+];
 
 Object.defineProperty(nextImage, "default", {
   configurable: true,

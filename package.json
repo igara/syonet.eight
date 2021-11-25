@@ -11,18 +11,19 @@
     "test:www": "cd projects/syonet_eight_www && cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "deploy:www": "cd projects/syonet_eight_www && cross-env NODE_ENV=production SLS_DEBUG=* serverless",
     "destroy:www": "cd projects/syonet_eight_www && cross-env NODE_ENV=production serverless remove --force",
-    "dev:design_system": "cd projects/syonet_eight_design_system && tsc -w",
-    "build:design_system": "cd projects/syonet_eight_design_system && tsc",
+    "dev:design_system": "npm-run-all --parallel dev_webpack:design_system dev_dts:design_system",
+    "dev_webpack:design_system": "cd projects/syonet_eight_design_system && webpack -w",
+    "dev_dts:design_system": "cd projects/syonet_eight_design_system && tsc -w",
+    "build:design_system": "yarn cache clean syonet_eight_design_system && cd projects/syonet_eight_design_system && rimraf dist && tsc && cross-env NODE_ENV=production webpack",
     "lint:design_system": "cd projects/syonet_eight_design_system && next lint",
     "test:design_system": "cd projects/syonet_eight_design_system &&  cross-env NODE_OPTIONS=--experimental-vm-modules jest",
-    "dev": "npm-run-all --parallel dev:www dev:design_system",
+    "dev": "rimraf projects/syonet_eight_www/.next && npm-run-all --parallel dev:www dev:design_system",
     "build": "npm-run-all --parallel build:www build:design_system",
     "start": "npm-run-all --parallel start:www",
     "lint": "npm-run-all --parallel lint:www lint:design_system",
     "test": "npm-run-all --parallel test:www test:design_system",
     "rm": "rimraf",
     "rm:all": "rimraf projects/syonet_eight_design_system/dist projects/syonet_eight_www/.next node_modules",
-    "yarn:clean": "yarn cache clean design_system",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "deploy:storybook": "cd projects/syonet_eight_storybook && cross-env SLS_DEBUG=* serverless deploy",
@@ -34,10 +35,11 @@
     "next": "12.0.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "design_system": "file:./projects/syonet_eight_design_system"
+    "syonet_eight_design_system": "file:./projects/syonet_eight_design_system"
   },
   "devDependencies": {
     "@babel/core": "7.16.0",
+    "@emotion/css": "^11.5.0",
     "@storybook/addon-actions": "6.3.12",
     "@storybook/addon-essentials": "6.3.12",
     "@storybook/addon-links": "6.3.12",
@@ -55,6 +57,7 @@
     "esbuild-jest": "0.5.0",
     "eslint": "7.23.0",
     "eslint-config-next": "12.0.4",
+    "filemanager-webpack-plugin": "6.1.7",
     "jest": "27.3.1",
     "npm-run-all": "4.1.5",
     "prettier": "2.4.1",
@@ -67,7 +70,8 @@
     "serverless": "2.66.2",
     "storybook-css-modules-preset": "1.1.1",
     "storycap": "3.1.0",
-    "typescript": "4.5.2"
+    "typescript": "4.5.2",
+    "webpack-cli": "4.9.1"
   },
   "resolutions": {
     "@types/react": "17.0.35"

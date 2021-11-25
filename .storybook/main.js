@@ -2,7 +2,8 @@ const path = require("path");
 
 module.exports = {
   stories: [
-    "../projects/syonet_eight_www/components/pages/index/*.stories.mdx",
+    "../projects/syonet_eight_www/components/**/*.stories.mdx",
+    "../projects/syonet_eight_design_system/src/components/**/*.stories.mdx",
   ],
   addons: [
     "@storybook/addon-links",
