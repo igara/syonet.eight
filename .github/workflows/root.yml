@@ -1,9 +1,11 @@
 name: root
 
 on:
+  schedule:
+    - cron: "00 09 * * *"
   push:
     branches:
-      - "*"
+      - "master"
 
 jobs:
   test:
