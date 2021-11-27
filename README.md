@@ -8,6 +8,11 @@ git clone https://github.com/igara/syonet_eight.git --recursive
 (cd syonet_eight && git submodule update --init もしくは git submodule update --init --remote projects/syonet_eight_www)
 
 cd syonet_eight
+
+cp .env.sample .env
+# edit .env
+code .env
+
 yarn
 ```
 
@@ -23,6 +28,12 @@ yarn dev
 
 ```
 yarn build:design_system
+```
+
+### Figma Import
+
+```
+yarn import:figma
 ```
 
 ## test & lint
@@ -41,6 +52,8 @@ yarn storybook
 ## deploy & destroy
 
 ### https://syonet.work
+
+resource: https://github.com/igara/syonet_eight_www
 
 already setting aws config.
 
