@@ -1,16 +1,18 @@
 const path = require("path");
 
 module.exports = {
-  stories: [
-    "../projects/syonet_eight_www/components/**/*.stories.mdx",
-    "../projects/syonet_eight_design_system/src/components/**/*.stories.mdx",
-  ],
+  stories: ["../projects/**/components/**/*.stories.mdx"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "storybook-css-modules-preset",
+    "@storybook/addon-a11y",
+    "@storybook/addon-postcss",
+    "storybook-addon-performance/register",
   ],
-  webpackFinal: async (config) => {
+  typescript: {
+    reactDocgen: false,
+  },
+  webpackFinal: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
       "@www": path.resolve(__dirname, "../projects/syonet_eight_www"),
@@ -18,7 +20,16 @@ module.exports = {
         __dirname,
         "../projects/syonet_eight_design_system"
       ),
+      "@emotion/core": path.resolve(
+        __dirname,
+        "../node_modules/@emotion/react"
+      ),
+      "emotion-theming": path.resolve(
+        __dirname,
+        "../node_modules/@emotion/react"
+      ),
     };
+
     return config;
   },
 };

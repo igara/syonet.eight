@@ -1,13 +1,8 @@
 import * as nextImage from "next/image";
-import { StyleRegistry } from "styled-jsx";
+import { addDecorator } from "@storybook/react";
+import { withPerformance } from "storybook-addon-performance";
 
-export const decorators = [
-  (Story) => (
-    <StyleRegistry>
-      <Story />
-    </StyleRegistry>
-  ),
-];
+addDecorator(withPerformance);
 
 Object.defineProperty(nextImage, "default", {
   configurable: true,

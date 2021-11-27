@@ -6,7 +6,7 @@
   },
   "@design_system:import": {
     "prefix": "@design_system:import",
-    "body": "import {} from '@design_system/';",
+    "body": "import {} from 'syonet_eigth_design_system';",
     "description": "@design_systemによるimport文追加"
   },
   "@media:query": {
