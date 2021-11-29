@@ -1,0 +1,16 @@
+{
+  // IntelliSense を使用して利用可能な属性を学べます。
+  // 既存の属性の説明をホバーして表示します。
+  // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "syonet_eight_www サーバサイド用のデバッガ設定",
+      "type": "node",
+      "request": "attach",
+      "skipFiles": ["<node_internals>/**"],
+      "port": 9230,
+      "cwd": "${workspaceRoot}/projects/syonet_eight_www"
+    }
+  ]
+}
