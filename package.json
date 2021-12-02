@@ -29,8 +29,14 @@
     "build:storybook": "build-storybook",
     "deploy:storybook": "cd projects/syonet_eight_storybook && cross-env SLS_DEBUG=* serverless deploy",
     "destroy:storybook": "cd projects/syonet_eight_storybook && serverless remove --force",
-    "storycap": "storycap --serverCmd \"npx http-server storybook-static -p 9001\" http://localhost:9001",
-    "vrt": "reg-suit run"
+    "storybook:www": "cd projects/syonet_eight_www && start-storybook -p 6006",
+    "build:storybook:www": "cd projects/syonet_eight_www && build-storybook",
+    "storybook:design_system": "cd projects/syonet_eight_design_system && start-storybook -p 6006",
+    "build:storybook:design_system": "cd projects/syonet_eight_design_system && build-storybook",
+    "storycap:www": "cd projects/syonet_eight_www && storycap --serverCmd \"npx http-server storybook-static -p 9001\" http://localhost:9001",
+    "storycap:design_system": "cd projects/syonet_eight_design_system && storycap --serverCmd \"npx http-server storybook-static -p 9001\" http://localhost:9001",
+    "vrt:www": "cd projects/syonet_eight_www && reg-suit run",
+    "vrt:design_system": "cd projects/syonet_eight_design_system && reg-suit run"
   },
   "dependencies": {
     "@emotion/react": "11.6.0",
