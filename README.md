@@ -36,6 +36,14 @@ yarn build:design_system
 yarn import:figma
 ```
 
+## template script
+
+```
+yarn templates path=projects/syonet_eight_design_system/src/components/xxxx/yyyy
+or
+yarn templates path=projects/syonet_eight_www/components/xxxx/yyyy
+```
+
 ## test & lint
 
 ```
