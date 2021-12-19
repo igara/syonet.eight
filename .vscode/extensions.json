@@ -4,6 +4,6 @@
     "esbenp.prettier-vscode",
     "cpylua.language-postcss",
     "silvenon.mdx",
-    "jpoissonnier.vscode-styled-components"
+    "styled-components.vscode-styled-components"
   ]
 }
