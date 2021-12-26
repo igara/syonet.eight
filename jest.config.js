@@ -13,7 +13,7 @@ module.exports = {
     ],
   },
   testEnvironment: 'jsdom',
-  moduleDirectories: ['node_modules'],
+  moduleDirectories: ['node_modules', '<rootDir>'],
   moduleNameMapper: {
     '\\.(svg)$': '<rootDir>/../../__mocks__/svg_mock.js',
     '\\.(jpg|jpeg|png|gif)$': '<rootDir>/../../__mocks__/image_mock.js',
