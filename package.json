@@ -26,7 +26,7 @@
     "test": "npm-run-all --parallel test:www test:design_system",
     "rm": "rimraf",
     "rm:all": "rimraf projects/syonet_eight_design_system/dist projects/syonet_eight_www/.next node_modules projects/syonet_eight_www/node_modules projects/syonet_eight_design_system/node_modules",
-    "reflash": "rimraf node_modules && yarn",
+    "reflash": "rimraf node_modules projects/syonet_eight_www/.next && yarn",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "deploy:storybook": "cd projects/syonet_eight_storybook && cross-env SLS_DEBUG=* serverless deploy",
