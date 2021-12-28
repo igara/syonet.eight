@@ -7,6 +7,6 @@
 	url = https://github.com/igara/syonet_eight_design_system.git
 	ignore = dirty
 [submodule "projects/syonet_eight_ogp"]
-	path = projects/syonet_eight_design_system
+	path = projects/syonet_eight_ogp
 	url = https://github.com/igara/syonet_eight_ogp.git
 	ignore = dirty
