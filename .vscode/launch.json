@@ -47,6 +47,14 @@
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "port": 9232
+    },
+    {
+      "name": "syonet_eight_ogp サーバサイド用のデバッガ設定",
+      "type": "node",
+      "request": "attach",
+      "skipFiles": ["<node_internals>/**"],
+      "port": 9233,
+      "cwd": "${workspaceRoot}/projects/syonet_eight_ogp"
     }
   ]
 }
