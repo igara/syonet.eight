@@ -10,3 +10,6 @@
 	path = projects/syonet_eight_ogp
 	url = https://github.com/igara/syonet_eight_ogp.git
 	ignore = dirty
+[submodule "projects/node-canvas-lambda"]
+	path = projects/node-canvas-lambda
+	url = https://github.com/igara/node-canvas-lambda.git
