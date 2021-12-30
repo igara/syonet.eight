@@ -30,6 +30,7 @@ yarn dev
 
 ```
 yarn build:design_system
+yarn reflash
 ```
 
 ### Figma Import
@@ -59,13 +60,13 @@ yarn test
 yarn storybook
 ```
 
-## deploy & destroy
-
-### https://syonet.work
+## https://syonet.work
 
 resource: https://github.com/igara/syonet_eight_www
 
 already setting aws config.
+
+### deploy & destroy
 
 ```
 yarn deploy:www
@@ -75,9 +76,29 @@ yarn deploy:www
 yarn destroy:www
 ```
 
-### https://storybook.syonet.work
+## https://ogp.syonet.work
+
+### deploy & destroy
+
+```
+# linux terminal(WSL)
+yarn build:node_canvas_lambda
+yarn deploy:node_canvas_lambda
+
+yarn create:domain:ogp
+yarn deploy:ogp
+```
+
+```
+yarn destroy:ogp
+yarn delete:domain:ogp
+```
+
+## https://storybook.syonet.work
 
 already settings provider aws in [Serverless Dashboard](https://app.serverless.com/) and create cloudformation stack.
+
+### deploy & destroy
 
 ```
 yarn build:storybook
@@ -87,5 +108,3 @@ yarn deploy:storybook
 ```
 yarn destroy:storybook
 ```
-
-### ogp
