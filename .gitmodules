@@ -13,3 +13,4 @@
 [submodule "projects/node-canvas-lambda"]
 	path = projects/node-canvas-lambda
 	url = https://github.com/igara/node-canvas-lambda.git
+	ignore = dirty
