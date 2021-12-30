@@ -13,6 +13,8 @@ cp .env.sample .env
 # edit .env
 code .env
 
+npm i -g yarn@1.22.5
+
 yarn
 ```
 
@@ -85,3 +87,5 @@ yarn deploy:storybook
 ```
 yarn destroy:storybook
 ```
+
+### ogp
