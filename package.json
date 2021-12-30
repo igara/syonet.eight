@@ -51,7 +51,6 @@
     "@emotion/react": "11.7.1",
     "aws-lambda": "1.0.7",
     "aws-serverless-express": "3.4.0",
-    "chrome-aws-lambda": "10.1.0",
     "express": "4.17.2",
     "next": "12.0.7",
     "react": "17.0.2",
