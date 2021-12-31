@@ -10,3 +10,7 @@
 	path = projects/syonet_eight_ogp
 	url = https://github.com/igara/syonet_eight_ogp.git
 	ignore = dirty
+[submodule "projects/chrome-aws-lambda"]
+	path = projects/chrome-aws-lambda
+	url = https://github.com/alixaxel/chrome-aws-lambda.git
+	ignore = dirty
