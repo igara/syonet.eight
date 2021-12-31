@@ -81,9 +81,10 @@ yarn destroy:www
 ### deploy & destroy
 
 ```
-# linux terminal(WSL)
-yarn build:node_canvas_lambda
-yarn deploy:node_canvas_lambda
+# use make command linux terminal(WSL)
+yarn zip:chrome_aws_lambda
+yarn build:chrome_aws_lambda
+yarn reflash
 
 yarn create:domain:ogp
 yarn deploy:ogp
