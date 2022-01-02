@@ -15931,6 +15931,13 @@ storybook-addon-mock@2.0.1:
     path-to-regexp "^6.2.0"
     react-json-editor-ajrm "^2.5.13"
 
+storybook-addon-next-router@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/storybook-addon-next-router/-/storybook-addon-next-router-3.1.1.tgz#46623ca36b450745c3517f5cdc4bf30fa4a4a930"
+  integrity sha512-Z14dED37vNXkN7+VY80HhF9itGReWoBAlKREHEk2By/dW7zSSqcSyXYV4bDMXIMAFYHMaA1svcBC1idVG8FhAw==
+  dependencies:
+    tslib "^2.3.0"
+
 storybook-addon-performance@0.16.1:
   version "0.16.1"
   resolved "https://registry.yarnpkg.com/storybook-addon-performance/-/storybook-addon-performance-0.16.1.tgz#f7dfee036c8c19a5d405fdb509e419b34432ee50"

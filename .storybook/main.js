@@ -9,6 +9,7 @@ module.exports = {
     '@storybook/addon-postcss',
     'storybook-addon-performance/register',
     'storybook-addon-mock/register',
+    'storybook-addon-next-router',
   ],
   typescript: {
     reactDocgen: false,
