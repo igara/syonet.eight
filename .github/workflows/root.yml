@@ -30,6 +30,8 @@ jobs:
           (cd projects/syonet_eight_design_system && git checkout master && git pull)
           git submodule update --init --remote projects/syonet_eight_www
           (cd projects/syonet_eight_www && git checkout master && git pull)
+          git submodule update --init --remote projects/chrome-aws-lambda
+          (cd projects/chrome-aws-lambda && git checkout master && git pull)
           git submodule update --init --remote projects/syonet_eight_ogp
           (cd projects/syonet_eight_ogp && git checkout master && git pull)
       - name: Get yarn cache directory path
