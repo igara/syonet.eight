@@ -51,6 +51,8 @@ jobs:
         run: |
           yarn cache clean syonet_eight_design_system
           yarn
+          yarn build:chrome_aws_lambda
+          yarn reflash
       - name: lint & test task
         run: |
           yarn lint
