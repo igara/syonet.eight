@@ -24,7 +24,7 @@
     "dev:design_system": "npm-run-all --parallel dev_webpack:design_system dev_dts:design_system",
     "dev_webpack:design_system": "cd projects/syonet_eight_design_system && webpack -w",
     "dev_dts:design_system": "cd projects/syonet_eight_design_system && tsc -w",
-    "build:design_system": "yarn cache clean syonet_eight_design_system && cd projects/syonet_eight_design_system && rimraf dist && tsc && cross-env NODE_ENV=production webpack",
+    "build:design_system": "cd projects/syonet_eight_design_system && rimraf dist && tsc && cross-env NODE_ENV=production webpack",
     "lint:design_system": "cd projects/syonet_eight_design_system && next lint",
     "test:design_system": "cd projects/syonet_eight_design_system && cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "import:figma": "cd projects/syonet_eight_design_system && node --require esbuild-register src/scripts/figma.ts",
