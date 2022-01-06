@@ -49,8 +49,9 @@ jobs:
           node-version: 14
       - name: install task
         run: |
-          yarn cache clean syonet_eight_design_system
           yarn
+          yarn cache clean syonet_eight_design_system
+          yarn cache clean chrome-aws-lambda
           yarn build:chrome_aws_lambda
           yarn reflash
       - name: lint & test task
