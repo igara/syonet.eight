@@ -14,3 +14,7 @@
 	path = projects/chrome-aws-lambda
 	url = https://github.com/igara/chrome-aws-lambda.git
 	ignore = dirty
+[submodule "projects/syonet_eight_algolia"]
+	path = projects/syonet_eight_algolia
+	url = https://github.com/igara/syonet_eight_algolia.git
+	ignore = dirty
