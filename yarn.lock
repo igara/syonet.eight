@@ -14801,6 +14801,11 @@ rechoir@^0.7.0:
   dependencies:
     resolve "^1.9.0"
 
+recoil-gear@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/recoil-gear/-/recoil-gear-1.0.2.tgz#41a9ded962393621b9d55b025a3cf439380a3955"
+  integrity sha512-FuSZ6JdarNO/Cx65UHPuxO0wwQoGH5J8O3+Uza2PQrdPJ1+xHq1RAxAKau97Pq4q4T/8HYCziTlrGvEE/wQMbQ==
+
 recoil@*, recoil@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/recoil/-/recoil-0.5.2.tgz#61fecce3b4dc91127a595586cf7369e2811ba024"
@@ -14830,6 +14835,13 @@ redent@^3.0.0:
   dependencies:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
+
+redux@4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-4.1.2.tgz#140f35426d99bb4729af760afcf79eaaac407104"
+  integrity sha512-SH8PglcebESbd/shgf6mii6EIoRM0zrQyjcuQ+ojmfxjTtE0z9Y8pa62iA/OJ58qjP6j27uyW4kUF4jl/jd6sw==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
 
 refractor@^3.1.0:
   version "3.5.0"
