@@ -53,6 +53,7 @@
   "dependencies": {
     "@emotion/react": "11.7.1",
     "@vendia/serverless-express": "4.5.2",
+    "algoliasearch": "4.12.1",
     "aws-lambda": "1.0.7",
     "aws-sdk": "2.1049.0",
     "chrome-aws-lambda": "file:./projects/chrome-aws-lambda",
