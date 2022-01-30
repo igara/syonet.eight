@@ -17012,6 +17012,9 @@ synchronous-promise@^2.0.15:
 "syonet_eight_design_system@file:./projects/syonet_eight_design_system":
   version "1.0.0"
 
+"syonet_eight_variables@file:./projects/syonet_eight_variables":
+  version "1.0.0"
+
 table@^6.0.4:
   version "6.7.5"
   resolved "https://registry.yarnpkg.com/table/-/table-6.7.5.tgz#f04478c351ef3d8c7904f0e8be90a1b62417d238"
