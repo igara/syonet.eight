@@ -34,6 +34,10 @@ jobs:
           (cd projects/chrome-aws-lambda && git checkout master && git pull)
           git submodule update --init --remote projects/syonet_eight_ogp
           (cd projects/syonet_eight_ogp && git checkout master && git pull)
+          git submodule update --init --remote projects/syonet_eight_variables
+          (cd projects/syonet_eight_variables && git checkout master && git pull)
+          git submodule update --init --remote projects/syonet_eight_algolia
+          (cd projects/syonet_eight_algolia && git checkout master && git pull)
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"

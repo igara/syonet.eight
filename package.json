@@ -26,6 +26,11 @@
     "test:algolia": "cd projects/syonet_eight_algolia && cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "deploy:algolia": "cd projects/syonet_eight_algolia && cross-env NODE_ENV=production SLS_DEBUG=* sls deploy --stage production",
     "destroy:algolia": "cd projects/syonet_eight_algolia && cross-env NODE_ENV=production SLS_DEBUG=* sls remove --stage production",
+    "esbuild_mjs:variables": "cd projects/syonet_eight_variables && esbuild src/index.ts --bundle --format=esm --outfile=dist/index.mjs",
+    "esbuild_cjs:variables": "cd projects/syonet_eight_variables && esbuild src/index.ts --bundle --format=cjs --outfile=dist/index.cjs",
+    "dts:variables": "cd projects/syonet_eight_variables && tsc",
+    "build:variables": "npm-run-all --parallel esbuild_mjs:variables esbuild_cjs:variables dts:variables",
+    "lint:variables": "cd projects/syonet_eight_variables && next lint",
     "dev:design_system": "npm-run-all --parallel dev_webpack:design_system dev_dts:design_system",
     "dev_webpack:design_system": "cd projects/syonet_eight_design_system && webpack -w",
     "dev_dts:design_system": "cd projects/syonet_eight_design_system && tsc -w",
@@ -34,13 +39,13 @@
     "test:design_system": "cd projects/syonet_eight_design_system && cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "import:figma": "cd projects/syonet_eight_design_system && node --require esbuild-register src/scripts/figma.ts",
     "templates": "cd projects/syonet_eight_design_system && node --require esbuild-register src/scripts/templates.ts",
-    "dev": "rimraf projects/syonet_eight_www/.next && npm-run-all --parallel dev:*",
-    "build": "npm-run-all --parallel build:www build:design_system",
+    "dev": "rimraf projects/syonet_eight_www/.next && npm-run-all --parallel dev:www dev:design_system build:variables",
+    "build": "npm-run-all --parallel build:www build:design_system build:variables",
     "start": "npm-run-all --parallel start:www",
-    "lint": "npm-run-all --parallel lint:www lint:design_system",
-    "test": "npm-run-all --parallel test:www test:design_system",
+    "lint": "npm-run-all --parallel lint:*",
+    "test": "npm-run-all --parallel test:*",
     "rm": "rimraf",
-    "rm:all": "rimraf projects/syonet_eight_design_system/dist projects/syonet_eight_www/.next node_modules projects/syonet_eight_www/node_modules projects/syonet_eight_design_system/node_modules",
+    "rm:all": "rimraf projects/syonet_eight_design_system/dist projects/syonet_eight_variables/dist projects/syonet_eight_www/.next node_modules projects/syonet_eight_www/node_modules projects/syonet_eight_design_system/node_modules",
     "reflash": "rimraf node_modules projects/syonet_eight_www/.next && yarn",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
@@ -71,6 +76,7 @@
     "swagger-jsdoc": "6.1.0",
     "swr": "1.1.1",
     "syonet_eight_design_system": "file:./projects/syonet_eight_design_system",
+    "syonet_eight_variables": "file:./projects/syonet_eight_variables",
     "uuid": "8.3.2"
   },
   "devDependencies": {
@@ -148,6 +154,8 @@
   "workspaces": [
     "projects/syonet_eight_www",
     "projects/syonet_eight_design_system",
-    "projects/syonet_eight_ogp"
+    "projects/syonet_eight_ogp",
+    "projects/syonet_eight_variables",
+    "projects/syonet_eight_algolia"
   ]
 }
