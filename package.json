@@ -13,7 +13,7 @@
     "destroy:www": "cd projects/syonet_eight_www && cross-env NODE_ENV=production serverless remove --force",
     "dev:ogp": "cd projects/syonet_eight_ogp && cross-env NODE_ENV=development node --inspect=0.0.0.0:9233 ../../node_modules/serverless/bin/serverless.js offline --httpPort 3001 --stage development",
     "lint:ogp": "cd projects/syonet_eight_ogp && next lint",
-    "test:ogp": "cd projects/syonet_eight_ogp && cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "test_ogp": "cd projects/syonet_eight_ogp && cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "zip:chrome_aws_lambda": "cd projects/chrome-aws-lambda && make chrome_aws_lambda.zip",
     "build:chrome_aws_lambda": "cd projects/chrome-aws-lambda && yarn && yarn build",
     "create:domain:ogp": "cd projects/syonet_eight_ogp && sls create_domain --stage production",
