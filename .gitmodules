@@ -18,3 +18,7 @@
 	path = projects/syonet_eight_algolia
 	url = https://github.com/igara/syonet_eight_algolia.git
 	ignore = dirty
+[submodule "projects/syonet_eight_variables"]
+	path = projects/syonet_eight_variables
+	url = https://github.com/igara/syonet_eight_variables.git
+	ignore = dirty
