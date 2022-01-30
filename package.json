@@ -41,7 +41,6 @@
     "templates": "cd projects/syonet_eight_design_system && node --require esbuild-register src/scripts/templates.ts",
     "dev": "rimraf projects/syonet_eight_www/.next && npm-run-all --parallel dev:www dev:design_system build:variables",
     "build": "npm-run-all --parallel build:www build:design_system build:variables",
-    "start": "npm-run-all --parallel start:www",
     "lint": "npm-run-all --parallel lint:*",
     "test": "npm-run-all --parallel test:*",
     "rm": "rimraf",
