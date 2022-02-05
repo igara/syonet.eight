@@ -95,6 +95,22 @@ yarn destroy:ogp
 yarn delete:domain:ogp
 ```
 
+## algolia
+
+### local
+
+```
+yarn dev:algolia
+yarn run:development:algolia [www_page...lambda function]
+```
+
+### production
+
+```
+yarn deploy:algolia
+yarn run:production:algolia
+```
+
 ## https://storybook.syonet.work
 
 already settings provider aws in [Serverless Dashboard](https://app.serverless.com/) and create cloudformation stack.
