@@ -44,7 +44,7 @@ yarn import:figma
 ```
 yarn templates path=projects/syonet_eight_design_system/src/components/xxxx/yyyy
 or
-yarn templates path=projects/syonet_eight_www/components/xxxx/yyyy
+yarn templates path=projects/syonet_eight_www/src/components/xxxx/yyyy
 ```
 
 ## test & lint
