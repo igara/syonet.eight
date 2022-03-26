@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   stories: ['../projects/**/components/**/*.stories.mdx'],
+  staticDirs: ['./public'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
