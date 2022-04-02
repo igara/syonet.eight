@@ -9,9 +9,19 @@ git clone https://github.com/igara/syonet_eight.git --recursive
 
 cd syonet_eight
 
-cp .env.sample .env
+cp .env.sample .env.development
+cp .env.sample .env.production
+
 # edit .env
-code .env
+code .env.development
+code .env.production
+
+cp .env.development projects/syonet_eight_algolia/.env.development
+cp .env.production projects/syonet_eight_algolia/.env.production
+cp .env.development projects/syonet_eight_ogp/.env.development
+cp .env.production projects/syonet_eight_ogp/.env.production
+cp .env.development projects/syonet_eight_www/.env.development
+cp .env.production projects/syonet_eight_www/.env.production
 
 npm i -g yarn@1.22.5
 
