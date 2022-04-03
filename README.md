@@ -78,13 +78,7 @@ already setting aws config.
 
 ### deploy & destroy
 
-```
-yarn deploy:www
-```
-
-```
-yarn destroy:www
-```
+from [vercel dashboard](https://vercel.com/dashboard)
 
 ## https://ogp.syonet.work
 

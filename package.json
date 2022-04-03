@@ -10,8 +10,6 @@
     "start:www": "cd projects/syonet_eight_www && next start",
     "lint:www": "cd projects/syonet_eight_www && next lint",
     "test:www": "cd projects/syonet_eight_www && cross-env NODE_OPTIONS=--experimental-vm-modules jest",
-    "deploy:www": "cd projects/syonet_eight_www && cross-env NODE_ENV=production SLS_DEBUG=* serverless",
-    "destroy:www": "cd projects/syonet_eight_www && cross-env NODE_ENV=production serverless remove --force",
     "dev:ogp": "cd projects/syonet_eight_ogp && cross-env NODE_ENV=development node --inspect=0.0.0.0:9233 ../../node_modules/serverless/bin/serverless.js offline --httpPort 4000 --websocketPort 4001 --lambdaPort 4002 --stage development",
     "lint:ogp": "cd projects/syonet_eight_ogp && next lint",
     "test_ogp": "cd projects/syonet_eight_ogp && cross-env NODE_OPTIONS=--experimental-vm-modules jest",
@@ -157,7 +155,7 @@
     "webpack-node-externals": "3.0.0"
   },
   "resolutions": {
-    "@types/react": "17.0.35"
+    "@types/react": "17.0.43"
   },
   "workspaces": [
     "projects/syonet_eight_www",
