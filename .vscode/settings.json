@@ -12,6 +12,5 @@
   "files.insertFinalNewline": true,
   "files.eol": "\n",
   "files.exclude": {},
-  "eslint.workingDirectories": [{ "mode": "auto" }],
-  "terminal.integrated.defaultProfile.windows": "Git Bash"
+  "eslint.workingDirectories": [{ "mode": "auto" }]
 }

@@ -2,8 +2,6 @@
 
 ## Settings
 
-installed [direnv](https://github.com/direnv/direnv)
-
 ```
 git clone https://github.com/igara/syonet_eight.git --recursive
 # --recursive をつけ忘れた際は下記を実行
@@ -17,11 +15,6 @@ cp .env.sample .env.production
 # edit .env
 code .env.development
 code .env.production
-
-cp .env.development projects/syonet_eight_algolia/.env.development
-cp .env.production projects/syonet_eight_algolia/.env.production
-cp .env.development projects/syonet_eight_ogp/.env.development
-cp .env.production projects/syonet_eight_ogp/.env.production
 
 npm i -g yarn@1.22.5
 
@@ -70,7 +63,7 @@ yarn test
 yarn storybook
 ```
 
-## https://syonet.work
+## https://www.syonet.work
 
 resource: https://github.com/igara/syonet_eight_www
 
