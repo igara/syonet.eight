@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "vercel-install": "git submodule update --init --remote projects/syonet_eight_variables && (cd projects/syonet_eight_variables && git checkout master && git pull) && git submodule update --init --remote projects/syonet_eight_design_system && (cd projects/syonet_eight_design_system && git checkout master && git pull) && git submodule update --init --remote projects/syonet_eight_www && (cd projects/syonet_eight_www && git checkout master && git pull)&& yarn install",
-    "dev:www": "cd projects/syonet_eight_www && cross-env NODE_OPTIONS='--inspect=9230' next dev",
+    "dev:www": "cd projects/syonet_eight_www &&  dotenv -e ../../.env.development.local cross-env NODE_OPTIONS='--inspect=9230' next dev",
     "build:www": "cd projects/syonet_eight_www && next build",
     "start:www": "cd projects/syonet_eight_www && next start",
     "lint:www": "cd projects/syonet_eight_www && next lint",
@@ -21,7 +21,7 @@
     "deploy:ogp": "yarn build_swagger_json:ogp && cd projects/syonet_eight_ogp && dotenv -e ../../.env.production.local serverless deploy --stage production",
     "destroy:ogp": "cd projects/syonet_eight_ogp && cross-env NODE_ENV=production sls remove --stage production",
     "dev:algolia": "cd projects/syonet_eight_algolia && dotenv -e ../../.env.development.local node --inspect=0.0.0.0:9235 ../../node_modules/serverless/bin/serverless.js offline --httpPort 4003 --websocketPort 4004 --lambdaPort 4005 --stage development",
-    "run:development:algolia": "cd projects/syonet_eight_algolia && cross-env NODE_ENV=development serverless invoke local --function ",
+    "run:development:algolia": "aws lambda invoke --endpoint-url http://localhost:3002 --function-name syonet-algolia-development-www_page algolia_response.json",
     "run:production:algolia": "aws lambda invoke --invocation-type Event --region us-east-1 --function-name syonet-algolia-production-www_page algolia_response.json",
     "lint:algolia": "cd projects/syonet_eight_algolia && next lint",
     "test:algolia": "cd projects/syonet_eight_algolia && cross-env NODE_OPTIONS=--experimental-vm-modules jest",
