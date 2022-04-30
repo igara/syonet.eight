@@ -22,3 +22,6 @@
 	path = projects/syonet_eight_variables
 	url = https://github.com/igara/syonet_eight_variables.git
 	ignore = dirty
+[submodule "projects/syonet_eight_rdb_model"]
+	path = projects/syonet_eight_rdb_model
+	url = https://github.com/igara/syonet_eight_rdb_model.git
