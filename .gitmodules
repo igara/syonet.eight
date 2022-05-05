@@ -26,3 +26,6 @@
 	path = projects/syonet_eight_rdb_model
 	url = https://github.com/igara/syonet_eight_rdb_model.git
 	ignore = dirty
+[submodule "projects/TsukinSimulator"]
+	path = projects/TsukinSimulator
+	url = https://github.com/igara/TsukinSimulator.git
